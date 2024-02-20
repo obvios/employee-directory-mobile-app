@@ -15,6 +15,7 @@
 		55A46D2F2B856515005C097B /* EmployeeDirectoryMobileAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D2E2B856515005C097B /* EmployeeDirectoryMobileAppUITests.swift */; };
 		55A46D312B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */; };
 		55A46D3F2B8565EC005C097B /* EmployeeDirectoryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 55A46D3E2B8565EC005C097B /* EmployeeDirectoryCore */; };
+		55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		55A46D2A2B856515005C097B /* EmployeeDirectoryMobileAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeDirectoryMobileAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A46D2E2B856515005C097B /* EmployeeDirectoryMobileAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryMobileAppUITests.swift; sourceTree = "<group>"; };
 		55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryMobileAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileEmployeesRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				55A46D132B85650D005C097B /* EmployeeDirectoryMobileAppApp.swift */,
 				55A46D152B85650D005C097B /* ContentView.swift */,
+				55A46D402B8568FA005C097B /* Persistence */,
 				55A46D172B856514005C097B /* Assets.xcassets */,
 				55A46D192B856514005C097B /* Preview Content */,
 			);
@@ -127,6 +130,14 @@
 				55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */,
 			);
 			path = EmployeeDirectoryMobileAppUITests;
+			sourceTree = "<group>";
+		};
+		55A46D402B8568FA005C097B /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 			files = (
 				55A46D162B85650D005C097B /* ContentView.swift in Sources */,
 				55A46D142B85650D005C097B /* EmployeeDirectoryMobileAppApp.swift in Sources */,
+				55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
