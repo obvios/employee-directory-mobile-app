@@ -14,6 +14,7 @@
 		55A46D252B856515005C097B /* EmployeeDirectoryMobileAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D242B856515005C097B /* EmployeeDirectoryMobileAppTests.swift */; };
 		55A46D2F2B856515005C097B /* EmployeeDirectoryMobileAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D2E2B856515005C097B /* EmployeeDirectoryMobileAppUITests.swift */; };
 		55A46D312B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */; };
+		55A46D3F2B8565EC005C097B /* EmployeeDirectoryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 55A46D3E2B8565EC005C097B /* EmployeeDirectoryCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A46D3F2B8565EC005C097B /* EmployeeDirectoryCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = EmployeeDirectoryMobileApp;
+			packageProductDependencies = (
+				55A46D3E2B8565EC005C097B /* EmployeeDirectoryCore */,
+			);
 			productName = EmployeeDirectoryMobileApp;
 			productReference = 55A46D102B85650D005C097B /* EmployeeDirectoryMobileApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 55A46D072B85650D005C097B;
+			packageReferences = (
+				55A46D3D2B8565EC005C097B /* XCRemoteSwiftPackageReference "employee-directory-core" */,
+			);
 			productRefGroup = 55A46D112B85650D005C097B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55A46D3D2B8565EC005C097B /* XCRemoteSwiftPackageReference "employee-directory-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/obvios/employee-directory-core.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55A46D3E2B8565EC005C097B /* EmployeeDirectoryCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55A46D3D2B8565EC005C097B /* XCRemoteSwiftPackageReference "employee-directory-core" */;
+			productName = EmployeeDirectoryCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55A46D082B85650D005C097B /* Project object */;
 }
