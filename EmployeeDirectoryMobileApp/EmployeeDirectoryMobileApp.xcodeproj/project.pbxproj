@@ -16,6 +16,7 @@
 		55A46D312B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */; };
 		55A46D3F2B8565EC005C097B /* EmployeeDirectoryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 55A46D3E2B8565EC005C097B /* EmployeeDirectoryCore */; };
 		55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */; };
+		55A46D452B862F37005C097B /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D442B862F37005C097B /* EmployeeListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		55A46D2E2B856515005C097B /* EmployeeDirectoryMobileAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryMobileAppUITests.swift; sourceTree = "<group>"; };
 		55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryMobileAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileEmployeesRepository.swift; sourceTree = "<group>"; };
+		55A46D442B862F37005C097B /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		55A46D432B862EFD005C097B /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
+				55A46D442B862F37005C097B /* EmployeeListView.swift */,
 			);
 			path = EmployeeList;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A46D452B862F37005C097B /* EmployeeListView.swift in Sources */,
 				55A46D162B85650D005C097B /* ContentView.swift in Sources */,
 				55A46D142B85650D005C097B /* EmployeeDirectoryMobileAppApp.swift in Sources */,
 				55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */,
