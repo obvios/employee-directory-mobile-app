@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import EmployeeDirectoryCore
 
 struct EmployeeListView: View {
+    let useCase: FetchEmployeeListUseCase
+    @State var employees: [Employee] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct EmployeeListView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmployeeListView()
+        List(employees) { employee in
+            Text(employee.firstName + employee.lastName)
+        }
+        .task {
+            guard let employeesResult = try? await useCase.execute() else { return }
+            employees = employeesResult
+        }
     }
 }
