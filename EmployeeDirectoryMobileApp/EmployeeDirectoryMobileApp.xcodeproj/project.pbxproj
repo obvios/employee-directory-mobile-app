@@ -100,6 +100,7 @@
 			children = (
 				55A46D132B85650D005C097B /* EmployeeDirectoryMobileAppApp.swift */,
 				55A46D152B85650D005C097B /* ContentView.swift */,
+				55A46D432B862EFD005C097B /* EmployeeList */,
 				55A46D402B8568FA005C097B /* Persistence */,
 				55A46D172B856514005C097B /* Assets.xcassets */,
 				55A46D192B856514005C097B /* Preview Content */,
@@ -138,6 +139,13 @@
 				55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		55A46D432B862EFD005C097B /* EmployeeList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EmployeeList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
