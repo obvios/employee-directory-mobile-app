@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    let repository = LocalFileEmployeesRepository()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+        EmployeeListView(repository: repository)
         .padding()
     }
 }
