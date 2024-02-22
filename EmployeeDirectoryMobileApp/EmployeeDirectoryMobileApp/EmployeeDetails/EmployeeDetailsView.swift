@@ -9,17 +9,20 @@ import SwiftUI
 import EmployeeDirectoryCore
 
 struct EmployeeDetailsView: View {
+    let repository: EmployeesRepository
     let useCase: FetchEmployeeDetailsUseCase
     let employeeID: Employee.Identifier
     @State var employee: Employee?
     
     init(repository: EmployeesRepository, employeeID: Employee.Identifier) {
+        self.repository = repository
         self.useCase = FetchEmployeeDetailsUseCase(repository: repository)
         self.employeeID = employeeID
     }
     
     var body: some View {
         VStack {
+            // TODO: Improve
             Text(employee?.firstName ?? "")
             Text(employee?.lastName ?? "")
         }
