@@ -17,6 +17,7 @@
 		55A46D3F2B8565EC005C097B /* EmployeeDirectoryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 55A46D3E2B8565EC005C097B /* EmployeeDirectoryCore */; };
 		55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */; };
 		55A46D452B862F37005C097B /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D442B862F37005C097B /* EmployeeListView.swift */; };
+		55A46D482B87896F005C097B /* EmployeeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D472B87896F005C097B /* EmployeeDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		55A46D302B856515005C097B /* EmployeeDirectoryMobileAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryMobileAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileEmployeesRepository.swift; sourceTree = "<group>"; };
 		55A46D442B862F37005C097B /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
+		55A46D472B87896F005C097B /* EmployeeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		55A46D462B878939005C097B /* EmployeeDetails */ = {
 			isa = PBXGroup;
 			children = (
+				55A46D472B87896F005C097B /* EmployeeDetailsView.swift */,
 			);
 			path = EmployeeDetails;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			files = (
 				55A46D452B862F37005C097B /* EmployeeListView.swift in Sources */,
 				55A46D162B85650D005C097B /* ContentView.swift in Sources */,
+				55A46D482B87896F005C097B /* EmployeeDetailsView.swift in Sources */,
 				55A46D142B85650D005C097B /* EmployeeDirectoryMobileAppApp.swift in Sources */,
 				55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */,
 			);
