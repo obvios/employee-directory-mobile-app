@@ -14,7 +14,7 @@ struct EmployeeListView: View {
     
     var body: some View {
         List(employees) { employee in
-            Text(employee.firstName + employee.lastName)
+            Text(employee.firstName + " " + employee.lastName)
         }
         .task {
             guard let employeesResult = try? await useCase.execute() else { return }
