@@ -18,6 +18,7 @@
 		55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */; };
 		55A46D452B862F37005C097B /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D442B862F37005C097B /* EmployeeListView.swift */; };
 		55A46D482B87896F005C097B /* EmployeeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D472B87896F005C097B /* EmployeeDetailsView.swift */; };
+		55A46D4A2B88DF2E005C097B /* EmployeeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A46D492B88DF2E005C097B /* EmployeeDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		55A46D412B856919005C097B /* LocalFileEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileEmployeesRepository.swift; sourceTree = "<group>"; };
 		55A46D442B862F37005C097B /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
 		55A46D472B87896F005C097B /* EmployeeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsView.swift; sourceTree = "<group>"; };
+		55A46D492B88DF2E005C097B /* EmployeeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				55A46D472B87896F005C097B /* EmployeeDetailsView.swift */,
+				55A46D492B88DF2E005C097B /* EmployeeDetailsViewModel.swift */,
 			);
 			path = EmployeeDetails;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				55A46D452B862F37005C097B /* EmployeeListView.swift in Sources */,
 				55A46D162B85650D005C097B /* ContentView.swift in Sources */,
 				55A46D482B87896F005C097B /* EmployeeDetailsView.swift in Sources */,
+				55A46D4A2B88DF2E005C097B /* EmployeeDetailsViewModel.swift in Sources */,
 				55A46D142B85650D005C097B /* EmployeeDirectoryMobileAppApp.swift in Sources */,
 				55A46D422B856919005C097B /* LocalFileEmployeesRepository.swift in Sources */,
 			);
