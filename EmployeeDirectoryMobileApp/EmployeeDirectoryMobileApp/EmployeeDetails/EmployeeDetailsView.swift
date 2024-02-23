@@ -9,10 +9,10 @@ import SwiftUI
 import EmployeeDirectoryCore
 
 struct EmployeeDetailsView: View {
-    let repository: EmployeesRepository
-    let useCase: FetchEmployeeDetailsUseCase
-    let employeeID: Employee.Identifier
-    @State var employee: Employee?
+    private let repository: EmployeesRepository
+    private let useCase: FetchEmployeeDetailsUseCase
+    private let employeeID: Employee.Identifier
+    @State private var employee: Employee?
     
     init(repository: EmployeesRepository, employeeID: Employee.Identifier) {
         self.repository = repository
