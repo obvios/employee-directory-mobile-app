@@ -18,26 +18,29 @@ struct EmployeeDetailsView: View {
     }
     
     var body: some View {
-        VStack {
-            if viewModel.isEditing {
-                TextField("First Name", text: $viewModel.editedFirstName)
-                TextField("Last Name", text: $viewModel.editedLastName)
-                TextField("Email", text: $viewModel.editedEmail)
-                TextField("Title", text: $viewModel.editedTitle)
-                Button("Save") {
-                    viewModel.saveEmployeeDetails()
-                }
-            } else {
-                Text(viewModel.employee?.firstName ?? "")
-                Text(viewModel.employee?.lastName ?? "")
-                Text(viewModel.employee?.email ?? "")
-                Text(viewModel.employee?.title ?? "")
-                Button("Edit") {
-                    viewModel.enableEditing()
+        VStack(spacing: 10) {
+            VStack(alignment: .leading) {
+                if viewModel.isEditing {
+                    TextField("First Name", text: $viewModel.editedFirstName)
+                    TextField("Last Name", text: $viewModel.editedLastName)
+                    TextField("Email", text: $viewModel.editedEmail)
+                    TextField("Title", text: $viewModel.editedTitle)
+                    Button("Save") {
+                        viewModel.saveEmployeeDetails()
+                    }
+                } else {
+                    Text("First Name: " + (viewModel.employee?.firstName ?? ""))
+                    Text("Last Name: " + (viewModel.employee?.lastName ?? ""))
+                    Text("Email: " + (viewModel.employee?.email ?? ""))
+                    Text("Title: " + (viewModel.employee?.title ?? ""))
                 }
             }
+            .textFieldStyle(.roundedBorder)
+            
+            Button("Edit") {
+                viewModel.enableEditing()
+            }
         }
-        .textFieldStyle(.roundedBorder)
     }
 }
 
