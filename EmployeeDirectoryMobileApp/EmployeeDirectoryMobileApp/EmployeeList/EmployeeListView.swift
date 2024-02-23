@@ -26,10 +26,12 @@ struct EmployeeListView: View {
             .navigationDestination(for: Employee.Identifier.self) { id in
                 EmployeeDetailsView(repository: repository, employeeID: id)
             }
-        }
-        .task {
-            guard let employeesResult = try? await useCase.execute() else { return }
-            employees = employeesResult
+            .onAppear {
+                Task {
+                    guard let employeesResult = try? await useCase.execute() else { return }
+                    employees = employeesResult
+                }
+            }
         }
     }
 }
