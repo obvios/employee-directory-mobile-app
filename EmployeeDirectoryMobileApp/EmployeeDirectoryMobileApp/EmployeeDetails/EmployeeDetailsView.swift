@@ -37,6 +37,7 @@ struct EmployeeDetailsView: View {
                 }
             }
         }
+        .textFieldStyle(.roundedBorder)
     }
 }
 
