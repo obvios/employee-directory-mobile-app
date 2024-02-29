@@ -13,10 +13,13 @@ enum RepositoryError: Error {
     case fileOperationFailed(String)
 }
 
+// Concrete implementation of `EmployeesRepository`. Uses
+// a local json file for data persistence.
 class LocalFileEmployeesRepository: EmployeesRepository {
     private let fileURL: URL
     
     init() {
+        // Seed the local file database with mock data
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         self.fileURL = documentDirectory.appendingPathComponent("employees.json")
         
@@ -35,6 +38,7 @@ class LocalFileEmployeesRepository: EmployeesRepository {
         }
     }
     
+    /// Fetches all employees.
     func fetchEmployees() async throws -> [Employee] {
         do {
             let data = try Data(contentsOf: fileURL)
@@ -45,6 +49,7 @@ class LocalFileEmployeesRepository: EmployeesRepository {
         }
     }
     
+    /// Fetches a single Employee using the id.
     func fetchEmployeeDetails(id: String) async throws -> Employee {
         do {
             let employees = try await fetchEmployees()
@@ -57,6 +62,7 @@ class LocalFileEmployeesRepository: EmployeesRepository {
         }
     }
     
+    /// Updates employee information.
     func updateEmployeeInformation(employee: Employee) async throws {
         do {
             var employees = try await fetchEmployees()
