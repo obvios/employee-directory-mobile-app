@@ -12,6 +12,7 @@ struct EmployeeListView: View {
     private let repository: EmployeesRepository
     private let useCase: FetchEmployeeListUseCase
     @State private var employees: [Employee] = []
+    @State private var searchTerm: String = ""
     
     init(repository: EmployeesRepository) {
         self.repository = repository
@@ -23,6 +24,12 @@ struct EmployeeListView: View {
             List(employees) { employee in
                 NavigationLink(employee.firstName + " " + employee.lastName, value: employee.id)
             }
+            .searchable(text: $searchTerm)
+            .onSubmit(of: .search) {
+                Task {
+                    await search()
+                }
+            }
             .navigationDestination(for: Employee.Identifier.self) { id in
                 EmployeeDetailsView(repository: repository, employeeID: id)
             }
@@ -33,5 +40,11 @@ struct EmployeeListView: View {
                 }
             }
         }
+    }
+    
+    /// Performs a search using the search term.
+    private func search() async {
+        guard let employeesResult = try? await useCase.execute(searchTerm: searchTerm) else { return }
+        employees = employeesResult
     }
 }
