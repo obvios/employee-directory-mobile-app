@@ -25,10 +25,8 @@ struct EmployeeListView: View {
                 NavigationLink(employee.firstName + " " + employee.lastName, value: employee.id)
             }
             .searchable(text: $searchTerm)
-            .onSubmit(of: .search) {
-                Task {
-                    await search()
-                }
+            .task {
+                await search()
             }
             .navigationDestination(for: Employee.Identifier.self) { id in
                 EmployeeDetailsView(repository: repository, employeeID: id)
