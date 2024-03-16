@@ -25,17 +25,17 @@ struct EmployeeListView: View {
                 NavigationLink(employee.firstName + " " + employee.lastName, value: employee.id)
             }
             .searchable(text: $searchTerm)
-            .task {
-                await search()
+            .onSubmit(of: .search) {
+                Task {
+                    await search()
+                }
             }
             .navigationDestination(for: Employee.Identifier.self) { id in
                 EmployeeDetailsView(repository: repository, employeeID: id)
             }
-            .onAppear {
-                Task {
-                    guard let employeesResult = try? await useCase.execute() else { return }
-                    employees = employeesResult
-                }
+            .task {
+                guard let employeesResult = try? await useCase.execute() else { return }
+                employees = employeesResult
             }
         }
     }
